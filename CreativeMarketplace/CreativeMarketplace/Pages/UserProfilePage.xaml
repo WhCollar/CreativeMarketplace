@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CreativeMarketplace.Pages.UserProfilePage"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients">
+    <ContentPage.Content>
+
+        <Grid>
+            <magic:GradientView>
+                <magic:LinearGradient>
+                    <magic:GradientStop Color="#24253C"/>
+                </magic:LinearGradient>
+            </magic:GradientView>
+
+            <StackLayout Orientation="Vertical"
+                     Spacing="50">
+
+                <Image Source="DefaultUserProfileImage.jpg"
+                       WidthRequest="200"
+                       HeightRequest="200"
+                       Margin="0, 75, 0, 0"
+                       x:Name="ProfileAvatar"/>
+
+                <Button WidthRequest="200"
+                        HeightRequest="200"
+                        HorizontalOptions="Center"
+                        VerticalOptions="CenterAndExpand"
+                        Margin="0, -535, 0, 0"
+                        BackgroundColor="Transparent"/>
+
+                <Label Text="{Binding User.Name}"
+                   HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   FontSize="22"
+                   FontAttributes="Bold"
+                   Margin="0, -850, 0, 0">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="{Binding User.Name}"
+                                  FontSize="22"/>
+
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label HorizontalOptions="Center"
+                   VerticalOptions="CenterAndExpand"
+                   Margin="0, -800, 0, 0"
+                   FontSize="20">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Количество баллов: "
+                                  FontSize="18"/>
+
+                                <Span Text="{Binding User.Score}"
+                                  FontSize="18"/>
+
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="CreativeMarketplace.Pages.CatalogWithBar"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            xmlns:local="clr-namespace:CreativeMarketplace.Pages"
+            BackgroundColor="AliceBlue"
+            BarBackgroundColor="#2196F3"
+            BarTextColor="White"
+            NavigationPage.HasNavigationBar="False"
+            android:TabbedPage.BarItemColor="#66FFFFFF"
+            android:TabbedPage.BarSelectedItemColor="White">
+
+    <local:UserProfilePage Title="Профиль" 
+                           IconImageSource="OutlinePerson.png"/>
+
+    <local:ProductCatalogWithBottomMenuPage Title="Каталог"
+                                            IconImageSource="CatalogImage.png"/>
+
+    <local:CartPage Title="Корзина"
+                    IconImageSource="ShoppingCart.png"/>
+
+</TabbedPage>

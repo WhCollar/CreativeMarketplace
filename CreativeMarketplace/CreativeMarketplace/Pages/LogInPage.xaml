@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             x:Class="CreativeMarketplace.LogInPage"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+
+            <magic:GradientView>
+                <magic:LinearGradient>
+                    <magic:GradientStop Color="#24253C"/>
+                </magic:LinearGradient>
+            </magic:GradientView>
+
+
+            <StackLayout Margin="0, 100, 0, 0"
+                         Padding="45"
+                         Spacing="25">
+                <Image Source="CreativeLogo.png"
+                       WidthRequest="250"
+                       Margin="-15, 0, 0, 0"/>
+
+                <Frame CornerRadius="15"
+                       HeightRequest="35"
+                       BackgroundColor="Transparent"
+                       BorderColor="#E73752"
+                       Margin="0, 30, 0, 0"
+                       Padding="10, 15, 10, 10">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="OutlinePerson.png"
+                               Margin="0, 0, 0, 0"/>
+
+                        <Entry WidthRequest="225"
+                           Margin="0, 0, 0, -5"
+                           HorizontalTextAlignment="Start"
+                           TextColor="White"
+                           Placeholder="Login"
+                           PlaceholderColor="DarkGray"
+                           x:Name="LoginEntry"/>
+                    </StackLayout>
+                </Frame>
+
+                <Frame CornerRadius="15"
+                       HeightRequest="35"
+                       BackgroundColor="Transparent"
+                       BorderColor="#E73752"
+                       Padding="10, 15, 10, 10">
+
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="LockIcon.png"
+                               Margin="0, 0, 0, 0"/>
+
+                        <Entry WidthRequest="225"
+                               Margin="0, 0, 0, -5"
+                               HorizontalTextAlignment="Start"
+                               TextColor="White"
+                               Placeholder="Password"
+                               PlaceholderColor="DarkGray"
+                               x:Name="PasswordEntry"
+                               IsPassword="True"/>
+                    </StackLayout>
+                    
+                </Frame>
+
+                <Button Text="Войти"
+                        WidthRequest="250"
+                        HeightRequest="65"
+                        CornerRadius="10"
+                        BackgroundColor="#F73B57"
+                        Margin="0, 150, 0, 0"
+                        Clicked="TryLogInButton"/>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
